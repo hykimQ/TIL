@@ -41,9 +41,7 @@ $ npm i -g http-server
 
 ### 설치된 패키지 확인
 
-- npm install, npm i (커맨드 뒤 패키지 이름을 붙이지 않으면 기존 패키지를 일괄적으로 설치)
-- --save-dev, -D 개발의존성 모드로 설치
-- --global, -g 패키지 전역 설치
+- npm ls
 
 ```console
 $ npm ls
