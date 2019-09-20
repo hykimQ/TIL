@@ -23,6 +23,10 @@ npm install -g @storybook/cli
 $ getstorybook
 ```
 
+```console
+$ getstorybook init
+```
+
 4. storybook 실행(package.json에 storybook관련 명령어 추가됨)
 
 ```console
