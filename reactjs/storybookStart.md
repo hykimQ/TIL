@@ -33,6 +33,10 @@ $ getstorybook init
 $ npm run storybook
 ```
 
+```console
+$ yarn storybook
+```
+
 ## Story 작성
 
 프로젝트에 stories 폴더가 생기고 그안에 index.js파일에 storybook 예제가 있음
