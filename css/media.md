@@ -34,4 +34,19 @@
 - only
 - , (미디어 쿼리에 포함된 콤마구분 리스트는 or 연산자와 같은 동작)
 
+## Etc
+
+```css
+@media all and (min-width: 568px) {
+}
+
+@media all and (min-width: 768px) {
+}
+
+@media all and (min-width: 1025px) {
+}
+
+/* min-width가 가장 작은 값이 적용됨 */
+```
+
 > [MDN CSS Media query](https://developer.mozilla.org/ko/docs/Web/Guide/CSS/Media_queries)
