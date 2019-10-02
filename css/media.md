@@ -32,6 +32,6 @@
 - and
 - not
 - only
-- ,
+- , (미디어 쿼리에 포함된 콤마구분 리스트는 or 연산자와 같은 동작)
 
 > [MDN CSS Media query](https://developer.mozilla.org/ko/docs/Web/Guide/CSS/Media_queries)
