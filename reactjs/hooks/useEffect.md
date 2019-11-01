@@ -1,5 +1,20 @@
 # useEffect
 
+## clear
+
+```javascript
+function React() {
+  useEffect(() => {
+    console.log("componentDidMount");
+    return () => {
+      console.log("componentWillUnMount");
+    };
+  }, []);
+
+  return <div />;
+}
+```
+
 ## 요약
 
 ### `useEffect`로 componentDidMount
