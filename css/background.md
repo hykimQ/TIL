@@ -1,14 +1,14 @@
-# background
+# 🖼background
 
-## background 관련 속성
+## 🛠background 관련 속성
 
-### background-color
+### 🎨background-color
 
 기본 값 : transparent
 
 배경의 색상을 지정하는 속성입니다.
 
-### background-image
+### 🖼background-image
 
 기본 값 : none
 
@@ -17,7 +17,7 @@ url의 경로는 절대 경로, 상대 경로 모두 사용 가능합니다.
 만약 background-color에 색상이 적용된 상태에서 background-image로 사용된 이미지에 투명한 부분이 있다면,
 그 부분에 background-color 색상이 노출됩니다.
 
-### background- repeat
+### 🎏background- repeat
 
 기본 값 : repeat
 
@@ -41,7 +41,7 @@ background-repeat의 값으로 사용할 수 있는 것들은 다음과 같습�
 
   이미지를 반복하지 않습니다.
 
-### background-position
+### ♟background-position
 
 기본 값 : 0% 0%
 
@@ -61,7 +61,7 @@ top, left, right, bottom, center 키워드를 사용할 수 있습니다.
 
 키워드는 선언 순서와 관계없이 top, bottom은 y축 기준으로 하며 left, right는 x축을 기준으로 합니다.
 
-### background-attachment
+### 🧩background-attachment
 
 기본 값 : scroll
 
@@ -81,13 +81,13 @@ top, left, right, bottom, center 키워드를 사용할 수 있습니다.
 
 > 뷰포트 : 사용자가 시각적으로 볼 수 있는 웹페이지 영역을 의미합니다. 컴퓨터나 휴대폰과 같은 장치에 Display 요소가 표현되는 영역을 말합니다.
 
-### background 축약
+### 📃background 축약
 
 ```css
 background: [-color] [-image] [-repeat] [-attachment] [-position];
 ```
 
-## Example
+## 📝Example
 
 ```html
 <html lang="ko">
