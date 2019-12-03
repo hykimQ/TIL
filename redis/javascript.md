@@ -46,3 +46,5 @@ sub.on("message", function(channel, message) {
 
 sub.subscribe("a nice channel");
 ```
+
+> https://www.npmjs.com/package/redis
