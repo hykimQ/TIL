@@ -36,6 +36,38 @@
 
 @media (max-width: 768px) {...} 처럼 미디어 타입을 생략하면 all 이 기본값이 되어 모든 미디어 타입에 적용
 
+예제 코드
+
+위에서 정의한 Syntax 따라 유효한 미디어 쿼리 예제 코드를 살펴보고 어떻게 해석이 되는지 같이 봅니다.
+
+@media screen { ... }
+
+미디어 타입이 screen이면 적용됩니다.
+
+@media screen and (min-width: 768px) { ... }
+
+미디어 타입이 screen이고 width가 768px 이상이면 적용됩니다. 두 개 중 하나라도 만족하지 않으면 거짓이 됩니다.
+
+@media (min-width: 768px) and (max-width: 1024px) { ... }
+
+and는 연결된 모든 표현식이 참이면 적용됩니다.(and 키워드는 연결된 부분이 모두 참이어야 적용이 됩니다.)
+
+@media (color-index)
+
+미디어 장치가 color-index를 지원하면 적용됩니다.
+
+@media screen and (min-width: 768px), screen and (orientation: portrait), ...
+
+쉼표로 연결된 미디어 쿼리 중 하나라도 참이면 적용됩니다.( and 키워드와 반대라고 생각하면 됩니다.)
+
+@media not screen and (min-width: 768px)
+
+not 키워드는 하나의 media_query 전체를 부정합니다.
+(not screen) and (min-width: 768px) 잘못된 해석!
+not (screen and (min-width: 768px)) 올바른 해석!
+@media not screen and (min-width: 768px), print
+첫 번째 미디어 쿼리에만 not 키워드가 적용되며, 두 번째 미디어 쿼리(print)에는 영향이 없습니다.
+
 ## 미디어 유형
 
 - all: 모든 장치에 적합
@@ -61,6 +93,53 @@
 - not
 - only
 - , (미디어 쿼리에 포함된 콤마구분 리스트는 or 연산자와 같은 동작)
+
+## Syntax
+
+```css
+media_query_list: S * [media_query [ "," S * media_query ] * ]?;
+media_query: [ONLY | NOT]? S * media_type S * [ AND S * expression ] * |
+  expression [ AND S * expression ] *;
+expression: "(" S * media_feature S * [ ":" S * expr ]? ")" S *;
+```
+
+- media_query_list
+  : 여러개의 미디어 쿼리로 이루어진 리스트로 작성 가능하며, 쉼표를 이용해서 구분합니다.
+
+- media_query
+
+  : A 형태 - 미디어 타입에 and 키워드를 이용해서 미디어 표현식을 붙일 수 있습니다.
+  미디어 타잎 앞에는 only 또는 not 키워드가 올 수 있습니다.
+  미디어 표현식은 생략 가능하기 때문에 미디어 타입 단독으로 사용될 수 있습니다.
+
+  : B 형태 - 미디어 타입 없이 미디어 표현식이 바로 나올 수 있습니다.(미디어 타입이 명시되지 않으면 all로 간주합니다.)
+  미디어 표현식은 and 키워드를 이용해서 계속해서 나올 수 있습니다.
+
+- expression
+  : 미디어 표현식은 괄호로 감싸야 하며, 특성 이름과 해당하는 값으로 이루어집니다. 이름과 값은 : 기호로 연결합니다.
+  또, 값이 없이 특성 이름만으로도 작성할 수 있다.
+
+Syntax는 전부 이해할 필요는 없지만 일부 기호는 알아두면 좋습니다.
+
+- [ a ] : a가 나올 수도 있고 나오지 않을 수도 있습니다.
+- a | b : a 또는 b 둘 중에 하나를 선택합니다.
+  "|"는 파이프 라인 기호로 키보드의 역슬래시(\) 키를 Shift 키를 누른 채로 누르면 나옵니다.
+- a? : a가 0번 나오거나 1번만 나올 수 있음
+- a\* : a가 0번 나오거나 그 이상 계속 나올 수 있음
+- media_type : all, screen, print 등 명세에 정의된 미디어 타입
+- media_feature : width, orientation 등 명세에 정의된 미디어 특성
+
+### min-/max- 접두사
+
+미디어 특성은 이름 앞에 min- 또는 max- 접두사를 붙일 수 있습니다.
+
+실제로 반응형 사이트를 제작할 때는 보통 접두사를 붙여서 사용합니다.
+
+접두사를 붙이지 않고 사용하는 경우 대부분 효율적이지 못하기 때문입니다.
+
+예를 들어 대부분의 반응형 사이트는 width 특성을 이용하는데, 접두사 없이 width: 00px 이라고 하게 선언하면
+
+정확히 뷰포트의 크기가 00px 에서만 적용되기 때문에, 다양한 기기들을 대응하기 힘듭니다.
 
 ## Etc
 
