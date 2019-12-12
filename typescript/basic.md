@@ -1,4 +1,4 @@
-# Typescript 기본
+# 👓Typescript 기본
 
 ## Type annotations
 
