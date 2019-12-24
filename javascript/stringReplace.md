@@ -1,4 +1,4 @@
-# String replace
+# 🎊String replace
 
 `replace()` 메서드는 어떤 패턴이 일치하는 일부 또는 모든 부분이 교체된 새로운 문자열을 반환한다. 그 패턴은 정규식, 문자열이 될 수 있다.
 
