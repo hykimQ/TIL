@@ -1,4 +1,4 @@
-# Rest 파라미터, spread 연산자
+# 🎞Rest 파라미터, spread 연산자
 
 ## Rest 파라미터
 
@@ -26,7 +26,12 @@ console.log(...[1, 2, 3]); // -> 1, 2, 3
 console.log(..."Helllo"); // H e l l l o
 
 // Map과 Set
-console.log(...new Map([["a", "1"], ["b", "2"]])); // [ 'a', '1' ] [ 'b', '2' ]
+console.log(
+  ...new Map([
+    ["a", "1"],
+    ["b", "2"]
+  ])
+); // [ 'a', '1' ] [ 'b', '2' ]
 console.log(...new Set([1, 2, 3])); // 1 2 3
 ```
 
