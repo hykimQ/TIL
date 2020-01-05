@@ -1,4 +1,4 @@
-# Promise
+# 💫Promise
 
 ```javascript
 var promise1 = new Promise(function(resolve, reject) {
