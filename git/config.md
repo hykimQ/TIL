@@ -1,4 +1,4 @@
-# config
+# 🧵config
 
 ## git pull login 정보 기억
 
