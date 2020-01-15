@@ -1,4 +1,4 @@
-# React.lazy
+# 🔌React.lazy
 
 `React.lazy`함수를 사용하면 dynamic import를 사용하여 가져온 컴포넌트를 렌더링 할 수 있다.
 
