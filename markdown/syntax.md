@@ -1,4 +1,4 @@
-# Markdown syntax
+# 📃Markdown syntax
 
 ## 제목
 
@@ -54,14 +54,8 @@ h1 부터 h6까지 표현
 ---
 
 (Hyphens)
-
----
-
-(Asterisks)
-
----
-
-(Underscores)
+---(Asterisks)
+---(Underscores)
 ```
 
 ---
