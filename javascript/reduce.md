@@ -1,4 +1,4 @@
-# reduce()
+# 🖇reduce()
 
 #### 배열의 각 요소에 대해 주어진 리듀서 함수를 실행하고, 하나의 결과값을 반환
 
@@ -50,23 +50,10 @@ const pipe = (...functions) => input =>
   functions.reduce((acc, fn) => fn(acc), input);
 
 // Composed functions for multiplication of specific values
-const multiply6 = pipe(
-  double,
-  triple
-);
-const multiply9 = pipe(
-  triple,
-  triple
-);
-const multiply16 = pipe(
-  quadruple,
-  quadruple
-);
-const multiply24 = pipe(
-  double,
-  triple,
-  quadruple
-);
+const multiply6 = pipe(double, triple);
+const multiply9 = pipe(triple, triple);
+const multiply16 = pipe(quadruple, quadruple);
+const multiply24 = pipe(double, triple, quadruple);
 
 // Usage
 multiply6(6); // 36
