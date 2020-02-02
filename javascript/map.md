@@ -1,4 +1,4 @@
-# Map
+# 🧿Map
 
 객체는 키-값 쌍을 저장하며 각 쌍의 삽입 순서도 기억합니다. 아무 값(객체, 원시 값)이나 키 또는 값으로 사용할 수 있습니다.
 
@@ -46,7 +46,10 @@ myMap.get(otherNaN); // "not a number"
 ## Array 객체와의 관계
 
 ```javascript
-var kvArray = [["key1", "value1"], ["key2", "value2"]];
+var kvArray = [
+  ["key1", "value1"],
+  ["key2", "value2"]
+];
 
 // 2D Array를 일반적인 Map constructor를 이용하여 Map 인스턴스를 만든다.
 var myMap = new Map(kvArray);
