@@ -1,4 +1,4 @@
-# JWT
+# 🎑JWT
 
 JWT 는 JSON Web Token의 약자로 전자 서명 된 URL-safe (URL로 이용할 수있는 문자 만 구성된)의 JSON입니다.
 전자 서명은 JSON 의 변조를 체크 할 수 있게되어 있습니다.
