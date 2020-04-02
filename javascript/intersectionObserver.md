@@ -1,4 +1,4 @@
-# intersectionObserver API
+# 🎍intersectionObserver API
 
 ## 사용되는 경우들..
 
